@@ -1,0 +1,73 @@
+[gd_scene load_steps=8 format=3 uid="uid://dd8d343o48tjn"]
+
+[ext_resource type="PackedScene" uid="uid://cb5yq6n4e2t2y" path="res://Player.tscn" id="1_player"]
+[ext_resource type="PackedScene" uid="uid://dd8d343o48tjk" path="res://Enemy.tscn" id="2_enemy"]
+[ext_resource type="PackedScene" uid="uid://cb5yq6n4e2t2z" path="res://Bush.tscn" id="3_bush"]
+[ext_resource type="PackedScene" uid="uid://cb5yq6n4e2t3a" path="res://Box.tscn" id="4_box"]
+[ext_resource type="PackedScene" uid="uid://cb5yq6n4e2t3b" path="res://Item.tscn" id="5_item"]
+[ext_resource type="PackedScene" uid="uid://dj86y0o0l3q3k" path="res://addons/virtual_joystick/virtual_joystick.tscn" id="6_joystick"]
+[ext_resource type="PackedScene" uid="uid://cx6b0r4n8h2p4" path="res://addons/virtual_joystick/virtual_button.tscn" id="7_button"]
+
+[node name="Main" type="Node2D"]
+
+[node name="Player" parent="." instance=ExtResource("1_player")]
+position = Vector2(160, 90)
+
+[node name="Enemy" parent="." instance=ExtResource("2_enemy")]
+position = Vector2(250, 50)
+
+[node name="Bush" parent="." instance=ExtResource("3_bush")]
+position = Vector2(100, 100)
+
+[node name="Bush2" parent="." instance=ExtResource("3_bush")]
+position = Vector2(120, 100)
+
+[node name="Box" parent="." instance=ExtResource("4_box")]
+position = Vector2(200, 120)
+
+[node name="Item" parent="." instance=ExtResource("5_item")]
+position = Vector2(160, 40)
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="Control" type="Control" parent="CanvasLayer"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="VirtualJoystick" parent="CanvasLayer/Control" instance=ExtResource("6_joystick")]
+layout_mode = 1
+anchors_preset = 2
+anchor_top = 1.0
+anchor_right = 0.0
+offset_left = 20.0
+offset_top = -120.0
+offset_right = 120.0
+offset_bottom = -20.0
+grow_horizontal = 1
+
+[node name="AttackButton" parent="CanvasLayer/Control" instance=ExtResource("7_button")]
+layout_mode = 1
+anchors_preset = 3
+anchor_left = 1.0
+anchor_top = 1.0
+offset_left = -80.0
+offset_top = -80.0
+offset_right = -30.0
+offset_bottom = -30.0
+grow_horizontal = 0
+
+[node name="InteractButton" parent="CanvasLayer/Control" instance=ExtResource("7_button")]
+layout_mode = 1
+anchors_preset = 3
+anchor_left = 1.0
+anchor_top = 1.0
+offset_left = -140.0
+offset_top = -60.0
+offset_right = -90.0
+offset_bottom = -10.0
+grow_horizontal = 0
+action = "interact"
