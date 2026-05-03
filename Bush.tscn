@@ -1,7 +1,7 @@
 [gd_scene load_steps=5 format=3 uid="uid://cb5yq6n4e2t2z"]
 
 [ext_resource type="Script" path="res://Bush.gd" id="1_bush"]
-[ext_resource type="Texture2D" path="res://icon.svg" id="2_icon"]
+[ext_resource type="Texture2D" path="res://assets/spritesheet.png" id="2_icon"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_bush"]
 size = Vector2(16, 16)
@@ -14,9 +14,10 @@ collision_layer = 1
 script = ExtResource("1_bush")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
-modulate = Color(0, 1, 0, 1)
-scale = Vector2(0.2, 0.2)
 texture = ExtResource("2_icon")
+scale = Vector2(0.133, 0.133)
+region_enabled = true
+region_rect = Rect2(610, 21, 67, 180)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 shape = SubResource("RectangleShape2D_bush")
