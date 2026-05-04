@@ -1,0 +1,35 @@
+[gd_scene load_steps=5 format=3 uid="uid://cb5yq6n4e2t2y"]
+
+[ext_resource type="Script" path="res://Player.gd" id="1_player"]
+[ext_resource type="Texture2D" path="res://assets/spritesheet.png" id="2_icon"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_player"]
+size = Vector2(16, 16)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_attack"]
+size = Vector2(24, 24)
+
+[node name="Player" type="CharacterBody2D" groups=["player"]]
+collision_layer = 2
+script = ExtResource("1_player")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("2_icon")
+scale = Vector2(0.264, 0.264)
+region_enabled = true
+region_rect = Rect2(40, 21, 74, 91)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("RectangleShape2D_player")
+
+[node name="AttackArea" type="Area2D" parent="." groups=["player_attack"]]
+collision_layer = 8
+collision_mask = 16
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="AttackArea"]
+shape = SubResource("RectangleShape2D_attack")
+disabled = true
+
+[node name="Camera2D" type="Camera2D" parent="."]
+zoom = Vector2(2, 2)
+position_smoothing_enabled = true
