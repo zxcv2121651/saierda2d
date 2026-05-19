@@ -1,6 +1,6 @@
 [gd_scene load_steps=4 format=3 uid="uid://cb5yq6n4e2t3b"]
 
-[ext_resource type="Script" path="res://Item.gd" id="1_item"]
+[ext_resource type="Script" path="res://src/scripts/Item.gd" id="1_item"]
 [ext_resource type="Texture2D" path="res://assets/spritesheet.png" id="2_icon"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_item"]

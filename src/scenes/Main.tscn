@@ -1,10 +1,10 @@
 [gd_scene load_steps=8 format=3 uid="uid://dd8d343o48tjn"]
 
-[ext_resource type="PackedScene" uid="uid://cb5yq6n4e2t2y" path="res://Player.tscn" id="1_player"]
-[ext_resource type="PackedScene" uid="uid://dd8d343o48tjk" path="res://Enemy.tscn" id="2_enemy"]
-[ext_resource type="PackedScene" uid="uid://cb5yq6n4e2t2z" path="res://Bush.tscn" id="3_bush"]
-[ext_resource type="PackedScene" uid="uid://cb5yq6n4e2t3a" path="res://Box.tscn" id="4_box"]
-[ext_resource type="PackedScene" uid="uid://cb5yq6n4e2t3b" path="res://Item.tscn" id="5_item"]
+[ext_resource type="PackedScene" uid="uid://cb5yq6n4e2t2y" path="res://src/scenes/Player.tscn" id="1_player"]
+[ext_resource type="PackedScene" uid="uid://dd8d343o48tjk" path="res://src/scenes/Enemy.tscn" id="2_enemy"]
+[ext_resource type="PackedScene" uid="uid://cb5yq6n4e2t2z" path="res://src/scenes/Bush.tscn" id="3_bush"]
+[ext_resource type="PackedScene" uid="uid://cb5yq6n4e2t3a" path="res://src/scenes/Box.tscn" id="4_box"]
+[ext_resource type="PackedScene" uid="uid://cb5yq6n4e2t3b" path="res://src/scenes/Item.tscn" id="5_item"]
 [ext_resource type="PackedScene" uid="uid://dj86y0o0l3q3k" path="res://addons/virtual_joystick/virtual_joystick.tscn" id="6_joystick"]
 [ext_resource type="PackedScene" uid="uid://cx6b0r4n8h2p4" path="res://addons/virtual_joystick/virtual_button.tscn" id="7_button"]
 
